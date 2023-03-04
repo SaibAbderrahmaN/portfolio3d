@@ -1,5 +1,5 @@
 import React from "react";
-//import Tilt from "react-tilt";
+import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -13,7 +13,7 @@ const ServiceCard = ({ index, title, icon }) => (
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
-      <div
+      <Tilt
         options={{
           max: 45,
           scale: 1,
@@ -30,7 +30,7 @@ const ServiceCard = ({ index, title, icon }) => (
         <h3 className='text-white text-[20px] font-bold text-center'>
           {title}
         </h3>
-      </div>
+      </Tilt>
     </motion.div>
   </div>
 );
